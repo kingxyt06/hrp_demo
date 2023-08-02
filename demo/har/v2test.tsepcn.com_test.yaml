@@ -1,0 +1,155 @@
+config:
+    name: testcase description
+teststeps:
+    - name: ""
+      request:
+        method: POST
+        url: https://v2test.tsepcn.com/api/access/pb/cmd/GetBannerList
+        headers:
+            :authority: v2test.tsepcn.com
+            :method: POST
+            :path: /api/access/pb/cmd/GetBannerList
+            :scheme: https
+            accept: application/json, text/plain, */*
+            accept-encoding: gzip, deflate, br
+            accept-language: zh-CN,zh;q=0.9,en;q=0.8
+            cache-control: no-cache
+            content-length: "242"
+            content-type: application/json
+            origin: https://v2test.tsepcn.com
+            pragma: no-cache
+            sec-ch-ua: '" Not A;Brand";v="99", "Chromium";v="98", "Google Chrome";v="98"'
+            sec-ch-ua-mobile: ?0
+            sec-ch-ua-platform: '"Windows"'
+            sec-fetch-dest: empty
+            sec-fetch-mode: cors
+            sec-fetch-site: same-origin
+            user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36
+        cookies:
+            saas_token: ca5f5ccb-dd43-4f95-a3d5-e810d1d71d06-sj
+            saas_uin: "14893"
+        body:
+            body:
+                client:
+                    env: ""
+                    isTourist: 48
+                    platform: 9
+                    product: 12
+                cmd: GetBannerList
+                payload:
+                    entry_type: 3
+                    page_index: 1
+                    page_size: 10
+                seq: 18
+                token: ca5f5ccb-dd43-4f95-a3d5-e810d1d71d06-sj
+            header:
+                flag: 0
+                version: ""
+      validate:
+        - check: status_code
+          assert: equals
+          expect: 200
+          msg: assert response status code
+        - check: headers."Content-Type"
+          assert: equals
+          expect: application/json; charset=utf-8
+          msg: assert response header Content-Type
+    - name: ""
+      request:
+        method: POST
+        url: https://v2test.tsepcn.com/api/access/pb/cmd/GetBannerLimit
+        headers:
+            :authority: v2test.tsepcn.com
+            :method: POST
+            :path: /api/access/pb/cmd/GetBannerLimit
+            :scheme: https
+            accept: application/json, text/plain, */*
+            accept-encoding: gzip, deflate, br
+            accept-language: zh-CN,zh;q=0.9,en;q=0.8
+            cache-control: no-cache
+            content-length: "213"
+            content-type: application/json
+            origin: https://v2test.tsepcn.com
+            pragma: no-cache
+            sec-ch-ua: '" Not A;Brand";v="99", "Chromium";v="98", "Google Chrome";v="98"'
+            sec-ch-ua-mobile: ?0
+            sec-ch-ua-platform: '"Windows"'
+            sec-fetch-dest: empty
+            sec-fetch-mode: cors
+            sec-fetch-site: same-origin
+            user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36
+        cookies:
+            saas_token: ca5f5ccb-dd43-4f95-a3d5-e810d1d71d06-sj
+            saas_uin: "14893"
+        body:
+            body:
+                client:
+                    env: ""
+                    isTourist: 48
+                    platform: 9
+                    product: 12
+                cmd: GetBannerLimit
+                payload:
+                    entry_type: 3
+                seq: 19
+                token: ca5f5ccb-dd43-4f95-a3d5-e810d1d71d06-sj
+            header:
+                flag: 0
+                version: ""
+      validate:
+        - check: status_code
+          assert: equals
+          expect: 200
+          msg: assert response status code
+        - check: headers."Content-Type"
+          assert: equals
+          expect: application/json; charset=utf-8
+          msg: assert response header Content-Type
+    - name: ""
+      request:
+        method: POST
+        url: https://aegis.qq.com/collect
+        params:
+            aid: c186549f-5952-4b0f-9486-a4c5c7a66b33
+            from: https%3A%2F%2Fv2test.tsepcn.com%2Fsaas%2FarticleManagement.html
+            id: akNqIsanJXJnMpAhyv
+            netType: "4"
+            platform: "3"
+            referer: https%3A%2F%2Fv2test.tsepcn.com%2Fsaas%2Flogin.html%3Fredirect_uri%3Dhttps%253A%252F%252Fv2test.tsepcn.com%252Fsaas%252FarticleManagement.html
+            sessionId: session-1690989641676
+            uin: "14893"
+            version: 1.32.20
+            x5Type: "3"
+        headers:
+            :authority: aegis.qq.com
+            :method: POST
+            :path: /collect?id=akNqIsanJXJnMpAhyv&uin=14893&version=1.32.20&aid=c186549f-5952-4b0f-9486-a4c5c7a66b33&platform=3&x5Type=3&netType=4&sessionId=session-1690989641676&from=https%3A%2F%2Fv2test.tsepcn.com%2Fsaas%2FarticleManagement.html&referer=https%3A%2F%2Fv2test.tsepcn.com%2Fsaas%2Flogin.html%3Fredirect_uri%3Dhttps%253A%252F%252Fv2test.tsepcn.com%252Fsaas%252FarticleManagement.html
+            :scheme: https
+            accept: '*/*'
+            accept-encoding: gzip, deflate, br
+            accept-language: zh-CN,zh;q=0.9,en;q=0.8
+            cache-control: no-cache
+            content-length: "7490"
+            content-type: application/x-www-form-urlencoded
+            origin: https://v2test.tsepcn.com
+            pragma: no-cache
+            sec-ch-ua: '" Not A;Brand";v="99", "Chromium";v="98", "Google Chrome";v="98"'
+            sec-ch-ua-mobile: ?0
+            sec-ch-ua-platform: '"Windows"'
+            sec-fetch-dest: empty
+            sec-fetch-mode: cors
+            sec-fetch-site: cross-site
+            user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36
+        body:
+            count: "2"
+            level[0]: "1"
+            level[1]: "1"
+            msg[0]: req%20url%3A%20%2Fapi%2Faccess%2Fpb%2Fcmd%2FGetBannerLimit%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%0Areq%20method%3A%20POST%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%0Areq%20param%3A%20%7B%22header%22%3A%7B%22version%22%3A%22%22%2C%22flag%22%3A0%7D%2C%22body%22%3A%7B%22seq%22%3A19%2C%22cmd%22%3A%22GetBannerLimit%22%2C%22token%22%3A%22ca5f5ccb-dd43-4f95-a3d5-e810d1d71d06-sj%22%2C%22client%22%3A%7B%22platform%22%3A9%2C%22env%22%3A%22%22%2C%22isTourist%22%3A48%2C%22product%22%3A12%7D%2C%22payload%22%3A%7B%22entry_type%22%3A3%7D%7D%7D%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%0Ares%20duration%3A%20214%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%0Ares%20status%3A%20200%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%0Ares%20data%3A%20%7B%22body%22%3A%7B%22payload%22%3A%7B%22limit%22%3A-1%2C%22already_sort%22%3A%5B1%2C6%2C9%2C5%2C4%2C9%2C1%2C9%2C2%2C10%2C7%2C3%2C7%2C8%2C10%2C11%2C9%5D%7D%2C%22traceid%22%3A%2215697aaf-8946-4b66-b914-d0f9241459aa%22%2C%22cmd%22%3A%22GetBannerLimit%22%2C%22retcode%22%3A0%2C%22message%22%3A%22success%22%2C%22bizcode%22%3A0%2C%22seq%22%3A19%7D%2C%22header%22%3A%7B%22flag%22%3A0%2C%22version%22%3A%22%22%7D%7D
+            msg[1]: req%20url%3A%20%2Fapi%2Faccess%2Fpb%2Fcmd%2FGetBannerList%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%0Areq%20method%3A%20POST%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%0Areq%20param%3A%20%7B%22header%22%3A%7B%22version%22%3A%22%22%2C%22flag%22%3A0%7D%2C%22body%22%3A%7B%22seq%22%3A18%2C%22cmd%22%3A%22GetBannerList%22%2C%22token%22%3A%22ca5f5ccb-dd43-4f95-a3d5-e810d1d71d06-sj%22%2C%22client%22%3A%7B%22platform%22%3A9%2C%22env%22%3A%22%22%2C%22isTourist%22%3A48%2C%22product%22%3A12%7D%2C%22payload%22%3A%7B%22entry_type%22%3A3%2C%22page_index%22%3A1%2C%22page_size%22%3A10%7D%7D%7D%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%0Ares%20duration%3A%20233%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%0Ares%20status%3A%20200%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%0Ares%20data%3A%20%7B%22body%22%3A%7B%22payload%22%3A%7B%22err_msg%22%3A%22%22%2C%22total%22%3A32%2C%22banner_list%22%3A%5B%7B%22sort%22%3A0%2C%22title%22%3A%22H5%E8%BF%90%E8%90%A5%E4%BD%8D3%22%2C%22banner_id%22%3A%2203a7062e-f8c3-4cff-bceb-97cb30fb0adf%22%2C%22image_url%22%3A%22https%3A%2F%2Ftsep-test-1304685099.cos.ap-guangzhou.myqcloud.com%2Ftsep_dev%2F91701202%2Fa35180fd-38ff-4ff6-8cb9-35b53343a152%22%2C%22entry_type%22%3A3%2C%22release_time%22%3A1655242060%2C%22preview_url%22%3A%22%22%2C%22redirect%22%3A%22%22%2C%22status%22%3A1%7D%2C%7B%22sort%22%3A0%2C%22title%22%3A%22%E4%B8%8E%E8%A1%8C%E4%B8%BA%22%2C%22banner_id%22%3A%2237408da1-893a-4b21-b7cf-ee7b10d4addb%22%2C%22image_url%22%3A%22https%3A%2F%2Ftsep-test-1304685099.cos.ap-guangzhou.myqcloud.com%2Ftsep_dev%2F10402202%2F8a5c14e9-fa82-494d-a87f-d89f0d2b07d7%22%2C%22entry_type%22%3A3%2C%22release_time%22%3A1648808130%2C%22preview_url%22%3A%22%22%2C%22redirect%22%3A%22https%3A%2F%2Fv2testh5.tsepcn.com%2Fpages%2Farticle%2Fview%2Findex%3FartType%3D0%26artId%3D975d14d3-3b7a-486e-bca0-5d078a02d23f%26appid%3Dwx87e554253d43026d%26subType%3D2%22%2C%22status%22%3A1%7D%2C%7B%22sort%22%3A0%2C%22title%22%3A%22%E6%9D%A8%E6%B4%8B%22%2C%22banner_id%22%3A%226bf97af1-0074-42a3-a082-eff61404edd9%22%2C%22image_url%22%3A%22https%3A%2F%2Ftsep-test-1304685099.cos.ap-guangzhou.myqcloud.com%2Ftsep_dev%2F12901202%2Fa92f7373-1db7-4037-9f8e-f823b468485c%22%2C%22entry_type%22%3A3%2C%22release_time%22%3A1632209149%2C%22preview_url%22%3A%22%22%2C%22redirect%22%3A%223f687a56-8426-4f8b-921c-36343a37766c%22%2C%22status%22%3A1%7D%2C%7B%22sort%22%3A0%2C%22title%22%3A%22test111%22%2C%22banner_id%22%3A%227dd6b4e7-3d7b-4339-927b-6764ca82a17f%22%2C%22image_url%22%3A%22https%3A%2F%2Ftsep-test-1304685099.cos.ap-guangzhou.myqcloud.com%2Ftsep_dev%2F62701202%2F7dea19de-6704-4a38-8450-3872570c583a%22%2C%22entry_type%22%3A3%2C%22release_time%22%3A1632121302%2C%22preview_url%22%3A%22%22%2C%22redirect%22%3A%22%22%2C%22status%22%3A1%7D%2C%7B%22sort%22%3A0%2C%22title%22%3A%22H5%E8%BF%90%E8%90%A5%E4%BD%8D%22%2C%22banner_id%22%3A%22df6a9885-099e-44b4-9f63-9c47358f638e%22%2C%22image_url%22%3A%22https%3A%2F%2Ftsep-test-1304685099.cos.ap-guangzhou.myqcloud.com%2Ftsep_dev%2F60502202%2Fce2e3205-16cc-41ef-bbce-771bd343e5f5%22%2C%22entry_type%22%3A3%2C%22release_time%22%3A1651821062%2C%22preview_url%22%3A%22%22%2C%22redirect%22%3A%22www.baidu.com%22%2C%22status%22%3A1%7D%2C%7B%22sort%22%3A0%2C%22title%22%3A%22test%22%2C%22banner_id%22%3A%222f20652f-bf48-4a81-b581-82ea2e45a3e5%22%2C%22image_url%22%3A%22https%3A%2F%2Ftsep-test-1304685099.cos.ap-guangzhou.myqcloud.com%2Ftsep_dev%2F41102202%2Fe52e7629-be72-4be7-98f6-dd3e9915a0c7%22%2C%22entry_type%22%3A3%2C%22release_time%22%3A0%2C%22preview_url%22%3A%22%22%2C%22redirect%22%3A%22https%3A%2F%2Fiwiki.woa.com%2Fpages%2Fviewpage.action%3FpageId%3D587236854%22%2C%22status%22%3A0%7D%2C%7B%22sort%22%3A0%2C%22title%22%3A%22%E6%AF%8F%E6%97%A5%E6%96%B0%E9%97%BB%22%2C%22banner_id%22%3A%22a0a9c536-15ea-4f1f-b0c8-54f3ccddb036%22%2C%22image_url%22%3A%22https%3A%2F%2Ftsep-test-1304685099.cos.ap-guangzhou.myqcloud.com%2Ftsep_dev%2F51402202%2F29699f81-584a-418b-a6e4-20f5f1f88f15%22%2C%22entry_type%22%3A3%2C%22release_time%22%3A0%2C%22preview_url%22%3A%22%22%2C%22redirect%22%3A%22https%3A%2F%2Fv2testh5.tsepcn.com%2Fpages%2Farticle%2Factive%2Findex%3Fid%3Dd1a6638a-74f1-4196-bb54-9ec6405ab803%22%2C%22status%22%3A0%7D%2C%7B%22sort%22%3A0%2C%22title%22%3A%22%E8%BF%90%E8%90%A5%E4%BD%8D%E6%B5%8B%E8%AF%95hch%22%2C%22banner_id%22%3A%22b9ed5086-66de-4af2-acac-f842de692ef0%22%2C%22image_url%22%3A%22https%3A%2F%2Ftsep-test-1304685099.cos.ap-guangzhou.myqcloud.com%2Ftsep_dev%2F81402202%2F71a3f34f-8ba3-41cf-8575-08db60101e51%22%2C%22entry_type%22%3A3%2C%22release_time%22%3A0%2C%22preview_url%22%3A%22%22%2C%22redirect%22%3A%22%22%2C%22status%22%3A0%7D%2C%7B%22sort%22%3A0%2C%22title%22%3A%22%E8%BF%90%E5%8A%A8%22%2C%22banner_id%22%3A%22c07b4d3d-ed38-4949-850e-21c20f2e0eeb%22%2C%22image_url%22%3A%22https%3A%2F%2Ftsep-test-1304685099.cos.ap-guangzhou.myqcloud.com%2Ftsep_dev%2F51402202%2F8e99b60b-8f32-4caa-9df9-85906166f430%22%2C%22entry_type%22%3A3%2C%22release_time%22%3A0%2C%22preview_url%22%3A%22%22%2C%22redirect%22%3A%22%22%2C%22status%22%3A0%7D%2C%7B%22sort%22%3A0%2C%22title%22%3A%22%E8%BF%90%E8%90%A5%E4%BD%8D%22%2C%22banner_id%22%3A%22cf9bc2ac-7f50-4239-acac-0d09e18c4827%22%2C%22image_url%22%3A%22https%3A%2F%2Ftsep-test-1304685099.cos.ap-guangzhou.myqcloud.com%2Ftsep_dev%2F32212202%2Faef1e7c4-6600-4160-a8e1-8e53991a17c5%22%2C%22entry_type%22%3A3%2C%22release_time%22%3A0%2C%22preview_url%22%3A%22%22%2C%22redirect%22%3A%22%22%2C%22status%22%3A0%7D%5D%2C%22err_code%22%3A0%7D%2C%22traceid%22%3A%225577a0ec-9b1f-48ac-8f99-6733804999e6%22%2C%22cmd%22%3A%22GetBannerList%22%2C%22retcode%22%3A0%2C%22message%22%3A%22success%22%2C%22bizcode%22%3A0%2C%22seq%22%3A18%7D%2C%22header%22%3A%7B%22flag%22%3A0%2C%22version%22%3A%22%22%7D%7D
+            trace[0]: ""
+            trace[1]: ""
+      validate:
+        - check: status_code
+          assert: equals
+          expect: 204
+          msg: assert response status code
